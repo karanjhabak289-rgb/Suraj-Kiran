@@ -6,3 +6,39 @@
   object-fit:cover;
   display:block;
 }
+
+
+@media (max-width:560px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .product-media {
+    height: 190px;
+  }
+
+  .product-body {
+    padding: 12px;
+  }
+
+  .product-name {
+    font-size: 17px;
+  }
+
+  .product-desc {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .product-meta {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .quick-add {
+    width: 34px;
+    height: 34px;
+    font-size: 21px;
+  }
+}
