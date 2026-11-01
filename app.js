@@ -9,6 +9,7 @@ const DEFAULT_PRODUCTS = [
       { size: "250 g", price: 135 },
       { size: "500 g (2 × 250 g)", price: 270 }
     ],
+    images: ["premium_chai_front.webp", "premium_chai_back.png"],
     desc: "A rich, aromatic premium CTC chai for everyday moments."
   },
   {
@@ -17,6 +18,7 @@ const DEFAULT_PRODUCTS = [
     category: "Black Tea",
     price: 110,
     size: "250 g",
+    images: ["Dhaba chai.png", "Dhaba chai 2.png"],
     desc: "A strong, full-bodied chai made for a bold cup."
   },
   {
@@ -25,6 +27,7 @@ const DEFAULT_PRODUCTS = [
     category: "Herbal Tea",
     price: 329,
     size: "100 g",
+    image: "hibiscus flower tea.png",
     desc: "A vibrant floral infusion with a refreshing character."
   },
   {
@@ -33,6 +36,7 @@ const DEFAULT_PRODUCTS = [
     category: "Specialty Tea",
     price: 379,
     size: "100 g",
+    image: "Butterfly Pea Flower Tea.png",
     desc: "A distinctive blue herbal infusion with an elegant presentation."
   },
   {
@@ -41,6 +45,7 @@ const DEFAULT_PRODUCTS = [
     category: "Green Tea",
     price: 349,
     size: "100 g",
+    image: "green tea.png",
     desc: "A clean, delicate tea for a lighter everyday ritual."
   },
   {
@@ -49,6 +54,7 @@ const DEFAULT_PRODUCTS = [
     category: "Herbal Tea",
     price: 359,
     size: "100 g",
+    image: "Chamomile flower tea.png",
     desc: "A gentle floral infusion made for slow, quiet moments."
   }
 ];
@@ -331,7 +337,7 @@ function renderDetail() {
 
             ${packs.map((x, i) => `
               <option value="${i}">
-                ${esc(x.size)} — ₹${Number(x.price).toLocaleString("en-IN")}
+                ${esc(x.size)}
               </option>
             `).join("")}
 
